@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'NeoDunggeunmo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'NeoDunggeunmo';
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: -webkit-repeating-radial-gradient( center center, #000, #000 1px, #fff 1px, #fff 100% );
+    background-size: 8px 8px;
+}
+.wrap {
+    min-width: 546px;
+}
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+}
+.canvasWrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.canvasFrame {
+    display: inline-block;
+    border: 4px solid #000;
+    border-radius: 6px;
+    padding-top: 40px;
+    margin: 0;
+    margin-bottom: 20px;
+    box-shadow: 7px 7px 0 0 #000;
+    position: relative;
+    background: repeating-radial-gradient( #fff, #fff 6px, #000 6px, #000 9px, transparent 0%, transparent 100% ), 
+                repeating-radial-gradient( #fff, #fff, 6px, #000 6px, #000 9px, transparent 0%, transparent 100% ), 
+                linear-gradient( #ddd, #ddd 36px, #000 36px, #000 36px );
+    background-color: #fff;
+    background-position: right 5px, right 27px top 5px, 0 0;
+    background-size: 28px 28px, 28px 28px, 100% 40px;
+    background-repeat: no-repeat;
+}
+.canvasFrame:nth-of-type(2) {
+    margin-left: 10px;
+}
+canvas {
+    display: block;
+    overflow: hidden;
+}
+.fileSelect {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+}
+.fileArea {
+    position: relative;
+    background-color: #fff;
+}
+#inFile {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    position: absolute;
+    overflow: hidden;
+    padding: .55rem;
+    top: 1.2px;
+    left: 17px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 256px;
+}
+.fileBtn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    padding: .8em 1em;
+    border: 4px solid #000;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: inset -4px -4px 0 #ddd;
+    transition: .15s ease;
+}
+.fileBtn:hover {
+    color: #fff;
+    background-color: #000;
+    box-shadow: none;
+}
+
+select {
+    font-weight: 700;
+    font-size: 1rem;
+    border: 4px solid #000;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: .8em 1em;
+    box-shadow: inset -4px -4px 0 #ddd;
+    cursor: pointer;
+}
+:root {
+/* Base Colors */
+--shade-10: #2c3e50;
+--shade-1: #d7dcdf;
+--shade-0: #fff;
+--teal: #1abc9c;
+
+
+/* Range Slider */
+--range-width: 100%;
+
+--range-handle-color: var(--shade-10);
+--range-handle-color-hover: var(--teal);
+--range-handle-size: 20px;
+
+--range-track-color: var(--shade-1);
+--range-track-height: 10px;
+
+--range-label-color: var(--shade-10);
+--range-label-width: 60px;
+}
+
+.range-slider {
+    width: var(--range-width);
+    margin: 60px 0 0 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.range-slider__range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: var(--range-track-height);
+    border-radius: 5px;
+    background: var(--range-track-color);
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Range Handle */
+.range-slider__range::-webkit-slider-thumb {
+    appearance: none;
+    width: var(--range-handle-size);
+    height: var(--range-handle-size);
+    border-radius: 50%;
+    background: var(--range-handle-color);
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
+
+.range-slider__range::-moz-range-thumb {
+    width: var(--range-handle-size);
+    height: var(--range-handle-size);
+    border: 0;
+    border-radius: 50%;
+    background: var(--range-handle-color);
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
+
+.range-slider__range:active::-moz-range-thumb {
+    background: var(--range-handle-color-hover);
+}
+
+/* Focus state */
+.range-slider__range:focus .range-slider__range::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px var(--shade-0),
+                0 0 0 6px var(--teal);
+}
+
+
+/* Range Label */
+.range-slider__value {
+    display: inline-block;
+    position: relative;
+    width: var(--range-label-width);
+    color: var(--shade-0);
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: var(--range-label-color);
+    padding: 5px 10px;
+    margin-left: 8px;
+}
+.range-slider__value:after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid var(--range-label-color);
+    border-bottom: 7px solid transparent;
+    content: '';
+}
+
+
+/* Firefox Overrides */
+::-moz-range-track {
+    background: var(--range-track-color);
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer { 
+border: 0; 
+}
