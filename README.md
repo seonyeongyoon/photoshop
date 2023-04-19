@@ -1,7 +1,7 @@
 # photoshop
  javascript로 photoshop 구현하기
  
-<a href="https://seonyeongyoon.github.io/photoshop/index.html" target="_newtab">프로젝트 보기</a>
+<a href="https://seonyeongyoon.github.io/photoshop/index.html" target="_blank">프로젝트 보기</a>
 
 1. 개발기간 : 2023.04.10 - 2023.04.18
 2. 개발환경 : html5, css3, javascript, jQuery 사용
